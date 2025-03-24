@@ -1,6 +1,6 @@
 import { atom, useAtom } from "jotai";
 import { useEffect } from "react";
-
+import { Link } from "react-router-dom";
 const pictures = [
   "DSC00680",
   "DSC00933",
@@ -52,10 +52,32 @@ export const UI = () => {
       <main className=" pointer-events-none select-none z-10 fixed  inset-0  flex justify-between flex-col">
         <a
           className="pointer-events-auto mt-10 ml-10"
-          href="https://lessons.wawasensei.dev/courses/react-three-fiber"
         >
           <img className="w-20" src="/images/wawasensei-white.png" />
         </a>
+        
+        <Link to="/home" className="absolute top-4 right-4">
+        <button
+        className="pointer-events-auto flex items-center justify-center bg-black/30 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out"
+        >
+        <span className="mr-2">Continue Shopping</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+    </Link>
+
         <div className="w-full overflow-auto pointer-events-auto flex justify-center">
           <div className="overflow-auto flex items-center gap-4 max-w-full p-10">
             {[...pages].map((_, index) => (
