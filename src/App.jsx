@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import { Experience } from "./components/Experience";
 import { UI } from "./components/UI";
 import Home from "./pages/Home";
+import Shop from "./pages/Shop";
 
 function App() {
   return (
@@ -33,8 +34,8 @@ function App() {
           }
         />
 
-        {/* Home Page */}
         <Route path="/home" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
       </Routes>
   );
 }
