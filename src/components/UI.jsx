@@ -53,7 +53,7 @@ export const UI = () => {
         <a
           className="pointer-events-auto mt-10 ml-10"
         >
-          <img className="w-20" src="/images/wawasensei-white.png" />
+          <img className="w-20" src="/images/zudio1.png" />
         </a>
         
         <Link to="/home" className="absolute top-4 right-4">
