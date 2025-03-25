@@ -135,131 +135,122 @@ const Home = () => {
 
 
       {/* Exclusive Collection */}
-      <section className="py-20 relative bg-gray-900 text-white">
-      {/* Animated Background Gradient */}
-      <motion.div
-        animate={{ x: [-50, 50, -50] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute inset-0 bg-gradient-to-l from-blue-600 via-indigo-500 to-purple-700 opacity-20"
-      ></motion.div>
+<section className="py-20 relative bg-gray-900 text-white">
+  {/* Static Background Gradient */}
+  <div className="absolute inset-0 bg-gradient-to-l from-blue-600 via-indigo-500 to-purple-700 opacity-20"></div>
 
-      {/* Heading & Subtitle */}
-      <div className="relative text-center">
-        <h2 className="text-4xl font-bold mb-6">Exclusive Collection</h2>
-        <p className="max-w-xl mx-auto text-lg">Limited edition styles just for you.</p>
+  {/* Heading & Subtitle */}
+  <div className="relative text-center">
+    <h2 className="text-4xl font-bold mb-6">Exclusive Collection</h2>
+    <p className="max-w-xl mx-auto text-lg">Limited edition styles just for you.</p>
+  </div>
+
+  {/* Stats Section */}
+  <div className="relative flex flex-wrap justify-center gap-12 mt-12">
+    {[
+      { number: "50+", label: "Exclusive Designs" },
+      { number: "10K+", label: "Happy Customers" },
+      { number: "24/7", label: "Customer Support" },
+    ].map((item, index) => (
+      <div key={index} className="text-center p-6 bg-gray-800 rounded-lg shadow-lg">
+        <h3 className="text-3xl font-bold">{item.number}</h3>
+        <p className="text-gray-400">{item.label}</p>
       </div>
+    ))}
+  </div>
 
-      {/* Animated Stats Section */}
-      <div className="relative flex flex-wrap justify-center gap-12 mt-12">
-        {[
-          { number: "50+", label: "Exclusive Designs" },
-          { number: "10K+", label: "Happy Customers" },
-          { number: "24/7", label: "Customer Support" },
-        ].map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.3 }}
-            className="text-center p-6 bg-gray-800 rounded-lg shadow-lg"
-          >
-            <h3 className="text-3xl font-bold">{item.number}</h3>
-            <p className="text-gray-400">{item.label}</p>
-          </motion.div>
-        ))}
+  {/* Featured Product Card */}
+  <div className="relative flex justify-center mt-12">
+    <div className="bg-gradient-to-r from-purple-600 to-indigo-500 p-8 rounded-xl shadow-xl max-w-sm text-center">
+      <h3 className="text-2xl font-bold">Limited Edition Drop</h3>
+      <p className="mt-2 text-gray-200">Only 100 pieces available worldwide.</p>
+      <button className="mt-4 px-6 py-2 bg-white text-gray-900 font-semibold rounded-lg shadow-md transition hover:bg-gray-300">
+        Shop Now
+      </button>
+    </div>
+  </div>
+</section>
+
+{/* Future of Fashion */}
+<section className="py-20 relative bg-gray-100 overflow-hidden">
+  {/* Static Background Gradient */}
+  <div className="absolute inset-0 bg-gradient-to-tr from-green-400 via-teal-500 to-blue-600 opacity-30"></div>
+
+  {/* Heading & Subtitle */}
+  <div className="relative text-center">
+    <h2 className="text-4xl font-bold mb-6">Future of Fashion</h2>
+    <p className="max-w-xl mx-auto text-lg">Tech meets style in futuristic designs.</p>
+  </div>
+
+  {/* Icon Features Section */}
+  <div className="relative flex flex-wrap justify-center gap-12 mt-12">
+    {[
+      { icon: <Cpu size={40} />, label: "Smart Fabrics", desc: "Adaptive, temperature-controlled materials." },
+      { icon: <Sparkles size={40} />, label: "Augmented Reality", desc: "Virtual try-ons with AR tech." },
+      { icon: <ShieldCheck size={40} />, label: "Sustainable Innovation", desc: "Eco-friendly & recycled designs." },
+    ].map((item, index) => (
+      <div key={index} className="flex items-center space-x-4 p-6 bg-white rounded-lg shadow-md max-w-xs">
+        <div className="text-teal-600">{item.icon}</div>
+        <div>
+          <h3 className="text-xl font-semibold">{item.label}</h3>
+          <p className="text-gray-600">{item.desc}</p>
+        </div>
       </div>
+    ))}
+  </div>
 
-      {/* Featured Product Card */}
-      <div className="relative flex justify-center mt-12">
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="bg-gradient-to-r from-purple-600 to-indigo-500 p-8 rounded-xl shadow-xl max-w-sm text-center"
-        >
-          <h3 className="text-2xl font-bold">Limited Edition Drop</h3>
-          <p className="mt-2 text-gray-200">Only 100 pieces available worldwide.</p>
-          <button className="mt-4 px-6 py-2 bg-white text-gray-900 font-semibold rounded-lg shadow-md transition hover:bg-gray-300">
-            Shop Now
-          </button>
-        </motion.div>
-      </div>
-    </section>
+  {/* Futuristic Fashion Showcase */}
+  <div className="relative flex justify-center mt-16">
+    <div className="bg-gradient-to-r from-blue-600 to-teal-400 p-8 rounded-xl shadow-xl max-w-sm text-center text-white">
+      <h3 className="text-2xl font-bold">The Next-Gen Collection</h3>
+      <p className="mt-2">Experience AI-integrated clothing & futuristic streetwear.</p>
+      <button className="mt-4 px-6 py-2 bg-white text-gray-900 font-semibold rounded-lg shadow-md transition hover:bg-gray-300">
+        Discover More
+      </button>
+    </div>
+  </div>
+</section>
 
-      {/* Future of Fashion */}
-      <section className="py-20 relative bg-gray-100 overflow-hidden">
-      {/* Animated Background Gradient */}
-      <motion.div
-        animate={{ x: [-50, 50, -50] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute inset-0 bg-gradient-to-tr from-green-400 via-teal-500 to-blue-600 opacity-30"
-      ></motion.div>
-
-      {/* Heading & Subtitle */}
-      <div className="relative text-center">
-        <h2 className="text-4xl font-bold mb-6">Future of Fashion</h2>
-        <p className="max-w-xl mx-auto text-lg">
-          Tech meets style in futuristic designs.
-        </p>
-      </div>
-
-      {/* Icon Features Section */}
-      <div className="relative flex flex-wrap justify-center gap-12 mt-12">
-        {[
-          { icon: <Cpu size={40} />, label: "Smart Fabrics", desc: "Adaptive, temperature-controlled materials." },
-          { icon: <Sparkles size={40} />, label: "Augmented Reality", desc: "Virtual try-ons with AR tech." },
-          { icon: <ShieldCheck size={40} />, label: "Sustainable Innovation", desc: "Eco-friendly & recycled designs." },
-        ].map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.3 }}
-            className="flex items-center space-x-4 p-6 bg-white rounded-lg shadow-md max-w-xs"
-          >
-            <div className="text-teal-600">{item.icon}</div>
-            <div>
-              <h3 className="text-xl font-semibold">{item.label}</h3>
-              <p className="text-gray-600">{item.desc}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Futuristic Fashion Showcase */}
-      <div className="relative flex justify-center mt-16">
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          className="bg-gradient-to-r from-blue-600 to-teal-400 p-8 rounded-xl shadow-xl max-w-sm text-center text-white"
-        >
-          <h3 className="text-2xl font-bold">The Next-Gen Collection</h3>
-          <p className="mt-2">Experience AI-integrated clothing & futuristic streetwear.</p>
-          <button className="mt-4 px-6 py-2 bg-white text-gray-900 font-semibold rounded-lg shadow-md transition hover:bg-gray-300">
-            Discover More
-          </button>
-        </motion.div>
-      </div>
-    </section>
 
       {/* Contact Us Section */}
-      <section className="py-20 px-4 bg-gray-100">
-        <h2 className="text-4xl font-bold mb-12 text-center">Get in Touch</h2>
-        <form className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700">Your Name</label>
-            <input type="text" required className="mt-1 block w-full border border-gray-300 rounded-md p-2" />
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700">Your Email</label>
-            <input type="email" required className="mt-1 block w-full border border-gray-300 rounded-md p-2" />
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700">Your Message</label>
-            <textarea required rows={4} className="mt-1 block w-full border border-gray-300 rounded-md p-2"></textarea>
-          </div>
-          <button type="submit" className="bg-black text-white px-8 py-3 rounded-full text-lg font-medium w-full">
-            Send Message
-          </button>
-        </form>
-      </section>
+      <section className="py-20 px-4 relative overflow-hidden">
+  {/* Animated Gradient Background */}
+  <motion.div
+    animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+    transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+    className="absolute inset-0 bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 opacity-25"
+  ></motion.div>
+
+  <div className="relative text-center">
+    <h2 className="text-4xl font-bold mb-12 text-gray-900">Get in Touch</h2>
+  </div>
+
+  {/* Contact Form */}
+  <form className="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-2xl relative z-10">
+    <div className="mb-4">
+      <label className="block text-sm font-medium text-gray-700">Your Name</label>
+      <input type="text" required className="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-pink-400" />
+    </div>
+    <div className="mb-4">
+      <label className="block text-sm font-medium text-gray-700">Your Email</label>
+      <input type="email" required className="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-pink-400" />
+    </div>
+    <div className="mb-4">
+      <label className="block text-sm font-medium text-gray-700">Your Message</label>
+      <textarea required rows={4} className="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-pink-400"></textarea>
+    </div>
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      type="submit"
+      className="bg-gradient-to-r from-orange-500 to-pink-600 text-white px-8 py-3 rounded-full text-lg font-medium w-full transition-all duration-300 hover:opacity-90"
+    >
+      Send Message
+    </motion.button>
+  </form>
+</section>
+
+
 
       {/* Footer */}
       <footer className="py-6 bg-black text-white text-center">
