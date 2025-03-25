@@ -51,12 +51,12 @@ export const UI = () => {
     <>
       <main className=" pointer-events-none select-none z-10 fixed  inset-0  flex justify-between flex-col">
         <a
-          className="pointer-events-auto mt-10 ml-10"
+          className="pointer-events-auto mt-8 ml-10"
         >
-          <img className="w-20" src="/images/zudio1.png" />
+          <img className="w-30 h-20" src="/images/zudio1.png" />
         </a>
         
-        <Link to="/home" className="absolute top-4 right-4">
+        <Link to="/home" className="absolute mt-8 top-5 right-4">
         <button
         className="pointer-events-auto flex items-center justify-center bg-black/30 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out"
         >
